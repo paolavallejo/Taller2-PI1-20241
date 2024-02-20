@@ -9,7 +9,7 @@ def home(request):
     #return HttpResponse('<h1>Welcome to Home Page</h1>')
     #return render(request, 'home.html')
     #return render(request, 'home.html', {'name':'Paola Vallejo'})
-    searchTerm = request.GET.get('searchMovie')
+    searchTerm = request.GET.get('searchMovie') # GET se usa para solicitar recursos de un servidor
     if searchTerm:
         movies = Movie.objects.filter(title__icontains=searchTerm)
     else:
@@ -20,3 +20,8 @@ def home(request):
 def about(request):
     #return HttpResponse('<h1>Welcome to About Page</h1>')
     return render(request, 'about.html')
+
+def signup(request):
+    email = request.GET.get('email') 
+    return render(request, 'signup.html', {'email':email})
+
