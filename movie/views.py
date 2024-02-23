@@ -24,4 +24,3 @@ def about(request):
 def signup(request):
     email = request.GET.get('email') 
     return render(request, 'signup.html', {'email':email})
-
