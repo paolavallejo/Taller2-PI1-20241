@@ -26,5 +26,6 @@ class Command(BaseCommand):
                                      genre = movie['genre'],
                                      year = movie['year'])        
         
-
         #self.stdout.write(self.style.SUCCESS(f'Successfully added {cont} products to the database'))
+                
+                
